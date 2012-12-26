@@ -32,7 +32,7 @@ helloResponses = [
 ]
 
 module.exports = (robot) ->
-  robot.hear /^hell+o|hi|howdy|sup|ahoy|hello|yo\s*$|\*wave\*/i, (msg) ->
+  robot.hear /^hell+o|hi|howdy|sup|ahoy|hello|hey|yo\s*$|\*wave\*/i, (msg) ->
     msg.send msg.random helloResponses
 
   robot.hear /^jarvis[\.\!\?]*$/i, (msg) ->
