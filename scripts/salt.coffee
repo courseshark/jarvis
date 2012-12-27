@@ -61,7 +61,7 @@ module.exports = (robot) ->
     robot.logger.debug 'Connection to Salt Server Closed'
 
   # Connect to the server
-  connection.connect host: saltServer, username: serverUser, privateKey: serverPrivateKey, passphrase: 'ru440417', pingInterval: 1000*60, tryKeyboard: true
+  connection.connect host: saltServer, username: serverUser, privateKey: serverPrivateKey, passphrase: serverPassphrase, pingInterval: 1000*60, tryKeyboard: true
 
   # On exit close the database
   process.on 'exit', ->
