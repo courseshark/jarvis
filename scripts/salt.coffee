@@ -61,6 +61,7 @@ module.exports = (robot) ->
     robot.logger.debug 'Connection to Salt Server Closed'
 
   # Connect to the server
+  serverPrivateKey = require('fs').readFileSync(process.env.HOME+'/.ssh/id_rsa')
   connection.connect host: saltServer, username: serverUser, privateKey: serverPrivateKey, passphrase: serverPassphrase, pingInterval: 1000*60, tryKeyboard: true
 
   # On exit close the database
